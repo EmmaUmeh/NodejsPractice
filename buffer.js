@@ -1,11 +1,14 @@
-var buf1 = new Buffer('ABC');
-var buf2 = new Buffer('ABCD')
-buf1.compare(buf2)
+// var buf = new Buffer(1024)
+// for(let i = 2; i < buf.length; i++){
+//     buf[i] = i + 24
+// }
 
-if(buf1 < 0){
-    console.log(buf1 + 'Is same as' + buf2)
-}else if(buf1 === buf2){
-console.log(buf1 + 'is iden' + buf2)
-}else{
-    console.log(buf1 + 'should comme before' + buf2)
-}
+// console.log(buf)
+
+// var buf = new Buffer(1024);
+// var buf2 = new Buffer('Same')
+
+// var final = buf.copy(buf2)
+// console.log(final)
+
+

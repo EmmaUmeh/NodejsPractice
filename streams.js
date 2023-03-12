@@ -1,15 +1,19 @@
+// write a streams
+
 var fs = require('fs')
-var data = ''
-var readStream = fs.createReadStream('input.txt')
-readStream.setEncoding('utf8')
-readStream.on('data', function(chunck) {
-data +=  chunck;
+var data = 'Simple streams added'
+
+var writeStream = fs.createWriteStream('input.txt')
+
+writeStream.write(data, 'utf-8')
+writeStream.end()
+
+writeStream.on('finish', function(){
+    console.log('Data written')
 })
-readStream.on('end', function() {
-    console.log(data)
+writeStream.on('error', function(err) {
+    if(err) {
+        return console.log(err)
+    }
 })
 
-readStream.on('error', function(err) {
-    console.error(err.stack)
-})
-console.log('Program Ended')
